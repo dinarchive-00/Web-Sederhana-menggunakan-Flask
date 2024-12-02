@@ -1,0 +1,38 @@
+<h3>Daftar Nilai</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mata Kuliah</th>
+            <td>Arsitektur dan Organisasi Komputer</td>
+            <th>SKS</th>
+            <td>2</td>
+            <th>Nilai</th>
+            <td>A</td>
+        </tr>
+        <tr>
+            <th>Mata Kuliah</th>
+            <td>Sistem Basis Data</td>
+            <th>SKS</th>
+            <td>3</td>
+            <th>Nilai</th>
+            <td>AB</td>
+        </tr>
+        <tr>
+            <th>Mata Kuliah</th>
+            <td>Interaksi Manusia Komputer</td>
+            <th>SKS</th>
+            <td>3</td>
+            <th>Nilai</th>
+            <td>AB</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for n in nilai %}
+        <tr>
+            <td>{{ n.mata_kuliah }}</td>
+            <td>{{ n.sks }}</td>
+            <td>{{ n.nilai }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

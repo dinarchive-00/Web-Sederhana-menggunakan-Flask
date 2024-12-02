@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kartu Rencana Studi (KRS)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h3>Kartu Rencana Studi (KRS)</h3>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Kode</th>
+                    <th>Mata Kuliah</th>
+                    <th>SKS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Contoh data KRS -->
+                <tr>
+                    <td>14823293</td>
+                    <td>Pengembangan Sistem Berbasis Web</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>000802</td>
+                    <td>Bahasa Indonesia</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>14823123</td>
+                    <td>Sistem Enterprise</td>
+                    <td>3</td>
+                </tr>
+                <!-- Data dinamis menggunakan Jinja -->
+                {% for matkul in mata_kuliah %}
+                <tr>
+                    <td>{{ matkul.kode }}</td>
+                    <td>{{ matkul.nama }}</td>
+                    <td>{{ matkul.sks }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
